@@ -19,4 +19,4 @@ api.add_resource(antminer.Fan, '/antminer/fan/<host>')
 api.add_resource(zennode.API, '/zennode/api/<api>')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0',port=5000,debug=True)
