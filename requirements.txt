@@ -1,0 +1,4 @@
+Flask_RESTful==0.3.7
+requests_cache==0.4.13
+requests==2.18.4
+Flask==1.0.2
