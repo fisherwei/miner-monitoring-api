@@ -17,7 +17,7 @@ api.add_resource(antminer.Conf, '/antminer/conf/<host>')
 api.add_resource(antminer.Restart, '/antminer/restart/<host>')
 api.add_resource(antminer.Fan, '/antminer/fan/<host>')
 api.add_resource(antminer.Pool, '/antminer/pool/<host>')
-api.add_resource(zennode.API, '/zennode/node_detail/<nodeid>')
+api.add_resource(zennode.NodeDetail, '/zennode/node_detail/<nodeid>')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port=5000,debug=True)
