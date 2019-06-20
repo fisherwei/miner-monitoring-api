@@ -4,18 +4,18 @@ import requests
 import os
 
 
-class API(Resource):
+class NodeDetail(Resource):
     def __init__(self):
         self.parser = reqparse.RequestParser()
-        self.parser.add_argument('api', type=str)
+        self.parser.add_argument('nodeid', type=str)
 
     def get(self, host):
         data = self.parser.parse_args()
-        api = data.get('api')
+        nodeid = data.get('nodeid')
         key = os.environ['ZEN_KEY']
 
         try:
-            response = requests.get('https://securenodes2.na.zensystem.io{api}?key={key}'.format(api=api, key=key))
+            response = requests.get('https://securenodes2.na.zensystem.io/api/{nodeid}/detail?key={key}'.format(nodeid=nodeid, key=key))
             return response.text
         except Exception as p:
             return p
