@@ -6,10 +6,12 @@ import requests
 class API(Resource):
     def __init__(self):
         self.parser = reqparse.RequestParser()
+        self.parser.add_argument('api', type=str)
         self.parser.add_argument('key', type=str)
 
     def get(self, host):
         data = self.parser.parse_args()
+        api = data.get('api')
         key = data.get('key')
 
         try:
