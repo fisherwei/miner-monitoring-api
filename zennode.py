@@ -7,11 +7,11 @@ import os
 class NodeDetail(Resource):
     def __init__(self):
         self.parser = reqparse.RequestParser()
-        self.parser.add_argument('nodeid', type=str)
+        self.parser.add_argument('key', type=str)
 
     def get(self, host):
         data = self.parser.parse_args()
-        nodeid = data.get('nodeid')
+        key = data.get('key')
         key = os.environ['ZEN_KEY']
 
         try:
