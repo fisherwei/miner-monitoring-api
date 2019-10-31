@@ -1,4 +1,4 @@
 requests_cache==0.4.13
 Flask_RESTful==0.3.7
-requests==2.18.4
+requests==2.20.0
 Flask==1.0.2
